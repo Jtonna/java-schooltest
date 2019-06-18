@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public interface CourseService
 {
+    Course save(Course course);
+
     Course findCourseById(long id);
 
     ArrayList<Course> findAll();
@@ -14,4 +16,5 @@ public interface CourseService
     ArrayList<CountStudentsInCourses> getCountStudentsInCourse();
 
     void delete(long id);
+
 }

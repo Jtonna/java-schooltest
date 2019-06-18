@@ -34,6 +34,10 @@ public class CourseServiceImplTest {
     }
 
     @Test
+    public void save() {
+    }
+
+    @Test
     public void findCourseById() {
         assertEquals("Data Science", cs.findCourseById(1).getCoursename());
     }
@@ -49,7 +53,7 @@ public class CourseServiceImplTest {
     @Test
     public void deleteFound()
     {
-        cs.delete(1);
+        cs.delete(3);
         assertEquals(5,cs.findAll().size());
     }
     

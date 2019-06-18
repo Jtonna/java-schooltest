@@ -17,6 +17,16 @@ public class CourseServiceImpl implements CourseService
     private CourseRepository courserepos;
 
     @Override
+    public Course save(Course course) {
+        Course newCourse = new Course();
+
+        newCourse.setCoursename("Learning to google coding issues");
+        newCourse.setInstructor(course.getInstructor());
+
+        return courserepos.save(newCourse);
+    }
+
+    @Override
     public Course findCourseById(long id) throws EntityNotFoundException
     {
         return courserepos.findById(id)
